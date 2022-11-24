@@ -1,3 +1,7 @@
+require("./assets/imgs/airplanewindow.png")
+require("./assets/imgs/skybackground.jpg")
+require("./style.css")
+
 const root = document.getElementById('root');
 
 const createDOMElements = () => {
@@ -9,6 +13,7 @@ const createDOMElements = () => {
         const h1 = document.createElement('h1');
         h1.className = 'title1';
         const skyBackGround = document.createElement('div');
+        skyBackGround.style.backgroundImage = "url(assets/imgs/skybackground.jpg)"
         skyBackGround.className = 'sky-background';
         const planeWindow = document.createElement('img');
         planeWindow.className = 'plane-window';
@@ -26,7 +31,7 @@ const createDOMElements = () => {
 
 const drawDetails = ({h1, planeWindow, context}) => {
     h1.textContent = "Adventure is worthwhile."
-    planeWindow.src = 'static/airplanewindow.png'
+    planeWindow.src = 'assets/imgs/airplanewindow.png'
     context.innerHTML = "Travel makes one modest.<br> You see what tiny place you occupy in the world."
 }
 
